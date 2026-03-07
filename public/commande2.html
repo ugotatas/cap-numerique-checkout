@@ -334,9 +334,8 @@
             <!-- PAYMENT ZONE - STRIPE EMBEDDED CHECKOUT -->
             <div class="payment-zone">
                 <h3>Moyen de paiement</h3>
-                <div id="checkout">
-                    <div class="loading-spinner">Chargement du formulaire sécurisé...</div>
-                </div>
+                <div id="checkout-loading" class="loading-spinner">Chargement du formulaire sécurisé...</div>
+                <div id="checkout"></div>
                 <div class="checkout-error" id="checkout-error">
                     Une erreur est survenue lors du chargement du formulaire de paiement. Veuillez rafraîchir la page.
                 </div>
@@ -473,9 +472,11 @@
                     clientSecret,
                 });
 
+                document.getElementById('checkout-loading').style.display = 'none';
                 checkout.mount('#checkout');
             } catch (error) {
                 console.error('Checkout error:', error);
+                document.getElementById('checkout-loading').style.display = 'none';
                 document.getElementById('checkout').style.display = 'none';
                 document.getElementById('checkout-error').style.display = 'block';
             }

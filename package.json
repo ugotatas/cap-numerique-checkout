@@ -1,0 +1,13 @@
+{
+  "name": "cap-numerique-checkout",
+  "version": "1.0.0",
+  "description": "Cap Numérique - Le Défi ChatGPT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "stripe": "^14.0.0"
+  }
+}

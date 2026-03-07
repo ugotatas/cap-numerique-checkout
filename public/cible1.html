@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1584401522864302');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1584401522864302&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script>fbq('track', 'ViewContent', {content_name: 'LP Salaries'});</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Défi ChatGPT · Cap Numérique</title>
@@ -492,7 +510,7 @@
                     <li>Fonctionne sur téléphone, tablette et ordinateur</li>
                 </ul>
 
-                <a href="/commande" class="cta-button">
+                <a href="/commande" class="cta-button" onclick="fbq('track','InitiateCheckout');">
                     Je relève le défi
                 </a>
                 <p class="cta-sub">🔒 Paiement sécurisé · Accès instantané après paiement</p>
@@ -508,7 +526,7 @@
     <!-- FINAL CTA -->
     <section class="body-copy">
         <div class="container" style="text-align: center; padding-bottom: 48px;">
-            <a href="/commande" class="cta-button">Je commence le Défi ChatGPT</a>
+            <a href="/commande" class="cta-button" onclick="fbq('track','InitiateCheckout');>Je commence le Défi ChatGPT</a>
         </div>
     </section>
 

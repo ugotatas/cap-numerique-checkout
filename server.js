@@ -83,6 +83,9 @@ app.get('/cible1', (req, res) => res.sendFile(path.join(__dirname, 'public', 'ci
 app.get('/cible2', (req, res) => res.sendFile(path.join(__dirname, 'public', 'cible2.html')));
 app.get('/commande', (req, res) => res.sendFile(path.join(__dirname, 'public', 'commande.html')));
 app.get('/commande2', (req, res) => res.sendFile(path.join(__dirname, 'public', 'commande2.html')));
+app.get('/cgv', (req, res) => res.sendFile(path.join(__dirname, 'public', 'cgv.html')));
+app.get('/mentions-legales', (req, res) => res.sendFile(path.join(__dirname, 'public', 'mentions-legales.html')));
+app.get('/confidentialite', (req, res) => res.sendFile(path.join(__dirname, 'public', 'confidentialite.html')));
 app.get('/merci', (req, res) => res.sendFile(path.join(__dirname, 'public', 'merci.html')));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -15,7 +15,7 @@ app.post('/create-checkout-session', async (req, res) => {
     try {
         const session = await stripe.checkout.sessions.create({
             line_items: [{
-                price: 'price_1T7z82ChA9z5X7DG4xyZlBrh',
+                price: 'price_1T9QouChA9z5X7DG3gxfGhxe',
                 quantity: 1,
             }],
             mode: 'payment',
@@ -43,7 +43,7 @@ app.post('/create-checkout-session-2', async (req, res) => {
     try {
         const session = await stripe.checkout.sessions.create({
             line_items: [{
-                price: 'price_1T7z82ChA9z5X7DG4xyZlBrh',
+                price: 'price_1T9QouChA9z5X7DG3gxfGhxe',
                 quantity: 1,
             }],
             mode: 'payment',

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -31,7 +31,8 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        img, video, iframe { max-width: 100%; height: auto; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
         body {
             font-family: 'DM Sans', sans-serif;
@@ -318,6 +319,29 @@
             .price-new { font-size: 44px; }
             .hero { padding: 40px 0 32px; }
             .programme-item { flex-direction: column; gap: 8px; }
+        }
+
+
+        @media (max-width: 480px) {
+            .container, .container-wide { padding: 0 14px; }
+            .logo-header { padding: 18px 14px 14px; }
+            .logo-header img { height: 62px; }
+            .hero { padding: 22px 0 14px; }
+            .hero h1 { font-size: 30px; line-height: 1.2; }
+            .hero .subhead { font-size: 16px; line-height: 1.5; margin-bottom: 20px; }
+            .body-copy { padding: 14px 0 28px; }
+            .body-copy h2 { font-size: 24px; line-height: 1.25; margin-top: 30px; margin-bottom: 12px; }
+            .body-copy p, .body-copy p.lead, .body-copy li { font-size: 16px; line-height: 1.55; }
+            .checklist li { padding: 10px 0 10px 30px; }
+            .objection-q, .objection-a { font-size: 16px; line-height: 1.55; }
+            .pricing-section { padding: 28px 0 38px; }
+            .pricing-card { border-width: 1px; border-radius: 12px; padding: 18px 14px; }
+            .price-old { font-size: 20px; }
+            .price-new { font-size: 34px; }
+            .cta-button { font-size: 17px; padding: 14px 18px; border-radius: 8px; }
+            .testimonials-section { padding: 30px 0; }
+            .testimonial-card { padding: 18px 14px; border-radius: 12px; }
+            .guarantee { padding: 16px 14px; margin: 20px auto; }
         }
 
         .fade-in {

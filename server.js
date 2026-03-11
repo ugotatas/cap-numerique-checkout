@@ -9,6 +9,17 @@ app.set('trust proxy', 1);
 
 app.use(express.static('public'));
 app.use(express.json());
+// Désactive le cache navigateur/CDN pour les pages HTML critiques (mobile fixes)
+const noCacheHeaders = {
+    'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+    Pragma: 'no-cache',
+    Expires: '0',
+    'Surrogate-Control': 'no-store',
+};
+
+function sendHtmlNoCache(res, fileName) {
+    return res.set(noCacheHeaders).sendFile(path.join(__dirname, 'public', fileName));
+}
 
 // === CHECKOUT SESSION CIBLE 1 (salariés 40-60) ===
 app.post('/create-checkout-session', async (req, res) => {
@@ -79,13 +90,13 @@ app.get('/session-status', async (req, res) => {
 });
 
 // === ROUTES PAGES ===
-app.get('/cible1', (req, res) => res.sendFile(path.join(__dirname, 'public', 'cible1.html')));
-app.get('/cible2', (req, res) => res.sendFile(path.join(__dirname, 'public', 'cible2.html')));
-app.get('/commande', (req, res) => res.sendFile(path.join(__dirname, 'public', 'commande.html')));
-app.get('/commande2', (req, res) => res.sendFile(path.join(__dirname, 'public', 'commande2.html')));
-app.get('/cgv', (req, res) => res.sendFile(path.join(__dirname, 'public', 'cgv.html')));
-app.get('/mentions-legales', (req, res) => res.sendFile(path.join(__dirname, 'public', 'mentions-legales.html')));
-app.get('/confidentialite', (req, res) => res.sendFile(path.join(__dirname, 'public', 'confidentialite.html')));
-app.get('/merci', (req, res) => res.sendFile(path.join(__dirname, 'public', 'merci.html')));
+app.get('/cible1', (req, res) => sendHtmlNoCache(res, 'cible1.html'));
+app.get('/cible2', (req, res) => sendHtmlNoCache(res, 'cible2.html'));
+app.get('/commande', (req, res) => sendHtmlNoCache(res, 'commande.html'));
+app.get('/commande2', (req, res) => sendHtmlNoCache(res, 'commande2.html'));
+app.get('/cgv', (req, res) => sendHtmlNoCache(res, 'cgv.html'));
+app.get('/mentions-legales', (req, res) => sendHtmlNoCache(res, 'mentions-legales.html'));
+app.get('/confidentialite', (req, res) => sendHtmlNoCache(res, 'confidentialite.html'));
+app.get('/merci', (req, res) => sendHtmlNoCache(res, 'merci.html'));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

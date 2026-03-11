@@ -317,11 +317,69 @@
 
         /* === RESPONSIVE === */
         @media (max-width: 700px) {
-            .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
-            .pricing-card { padding: 32px 20px; }
-            .price-new { font-size: 44px; }
-            .hero { padding: 40px 0 32px; }
-            .programme-item { flex-direction: column; gap: 8px; }
+            /* BASE */
+            body { font-size: 13px; }
+            .container, .container-wide { padding: 0 16px; }
+            .logo-header img { max-width: 120px; }
+
+
+            /* HERO */
+            .hero { padding: 28px 0 20px; }
+            .hero h1 { font-size: 26px; line-height: 1.25; }
+            .subhead { font-size: 15px; }
+            .hero-badge { font-size: 11px; padding: 5px 14px; }
+
+            /* PROGRAMME */
+            .programme-item { flex-direction: column; gap: 6px; }
+            .programme-item .desc { font-size: 14px; }
+
+            /* BODY COPY */
+            .body-copy p.lead { font-size: 16px; }
+            .body-copy p, .body-copy li { font-size: 15px; }
+            .body-copy h2 { font-size: 22px; }
+
+            /* SECTION TITRES */
+            h2, .section-title { font-size: 20px; }
+
+            /* AVIS / TESTIMONIALS */
+            .testimonials-grid { grid-template-columns: 1fr; gap: 14px; }
+            .testimonial-card blockquote { font-size: 14px; }
+            .testimonial-name { font-size: 14px; }
+            .testimonial-context { font-size: 12px; }
+
+            /* PRICING */
+            .pricing-card { padding: 24px 16px; }
+            .price-new { font-size: 40px; }
+            .pricing-features li { font-size: 14px; }
+
+            /* CTA BUTTON */
+            .cta-button { font-size: 16px; padding: 16px 24px; }
+
+            /* FAQ */
+            .objection-q { font-size: 15px; }
+            .objection-a { font-size: 14px; line-height: 1.55; }
+
+            /* GUARANTEE */
+            .guarantee p { font-size: 14px; }
+
+            /* CAS USAGE - cards côte à côte → empilées */
+            .cas-usage-flex,
+            div[style*="display: flex"][style*="align-items: center"][style*="gap: 16px"] {
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+            div[style*="display: flex"][style*="align-items: center"][style*="gap: 16px"] > div {
+                width: 100% !important;
+                flex: none !important;
+            }
+
+            /* FLÈCHE entre cards → cachée sur mobile */
+            div[style*="flex-shrink: 0"][style*="font-size: 28px"] {
+                display: none !important;
+            }
+
+            /* SCREENSHOT ChatGPT */
+            div[style*="background: #1A1A1A"] { border-radius: 8px; }
         }
 
 
@@ -346,11 +404,16 @@
     .pricing-section { padding: 24px 0 32px; }
     .pricing-card { border-width: 1px; border-radius: 10px; padding: 16px 12px; }
     .price-old { font-size: 16px; }
-    .price-new { font-size: 30px; }
+    .price-new { font-size: 37px; }
     .cta-button { font-size: 15px; padding: 12px 14px; border-radius: 8px; }
 
     .testimonials-section { padding: 24px 0; }
     .testimonial-card { padding: 14px 12px; border-radius: 10px; }
+    .testimonial-top img { width: 40px !important; height: 40px !important; }
+    .testimonial-badge { font-size: 11px; padding: 4px 8px; }
+    .testimonial-name { font-size: 13px; }
+    .testimonial-context { font-size: 11px; }
+    .testimonial-card blockquote { font-size: 13px; line-height: 1.55; }
     .guarantee { padding: 14px 12px; margin: 16px auto; }
 
     /* Cards "Sans/Avec méthode" */
@@ -583,7 +646,7 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-top">
-                        <img src="/images/G%C3%A9rard%2C%2062%20ans.png" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+                        <img src="/images/gerard-62.png" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
                         <div class="testimonial-badge">✅ Avis certifié</div>
                     </div>
                     <p class="testimonial-name">Gérard P., 62 ans, Montpellier</p>

@@ -326,27 +326,57 @@
 
 
         @media (max-width: 480px) {
-            .container, .container-wide { padding: 0 14px; }
-            .logo-header { padding: 18px 14px 14px; }
-            .logo-header img { height: 62px; }
-            .hero { padding: 22px 0 14px; }
-            .hero h1 { font-size: 30px; line-height: 1.2; }
-            .hero .subhead { font-size: 16px; line-height: 1.5; margin-bottom: 20px; }
-            .body-copy { padding: 14px 0 28px; }
-            .body-copy h2 { font-size: 24px; line-height: 1.25; margin-top: 30px; margin-bottom: 12px; }
-            .body-copy p, .body-copy p.lead, .body-copy li { font-size: 16px; line-height: 1.55; }
-            .checklist li { padding: 10px 0 10px 30px; }
-            .objection-q, .objection-a { font-size: 16px; line-height: 1.55; }
-            .pricing-section { padding: 28px 0 38px; }
-            .pricing-card { border-width: 1px; border-radius: 12px; padding: 18px 14px; }
-            .price-old { font-size: 20px; }
-            .price-new { font-size: 34px; }
-            .cta-button { font-size: 17px; padding: 14px 18px; border-radius: 8px; }
-            .testimonials-section { padding: 30px 0; }
-            .testimonial-card { padding: 18px 14px; border-radius: 12px; }
-            .guarantee { padding: 16px 14px; margin: 20px auto; }
-        }
+    html { -webkit-text-size-adjust: 85% !important; text-size-adjust: 85% !important; }
+    body { font-size: 12px; line-height: 1.45; }
 
+    .container, .container-wide { padding: 0 12px; }
+    .logo-header { padding: 14px 12px 10px; }
+    .logo-header img { height: 50px; }
+    .hero { padding: 18px 0 12px; }
+    .hero h1 { font-size: 24px; line-height: 1.22; }
+    .hero .subhead { font-size: 14px; line-height: 1.45; margin-bottom: 16px; }
+    .hero-badge { font-size: 10px; padding: 4px 10px; margin-bottom: 14px; }
+
+    .body-copy { padding: 12px 0 22px; }
+    .body-copy h2 { font-size: 20px; line-height: 1.25; margin-top: 24px; margin-bottom: 10px; }
+    .body-copy p, .body-copy p.lead, .body-copy li { font-size: 14px; line-height: 1.55; }
+    .checklist li { padding: 9px 0 9px 28px; }
+    .objection-q, .objection-a { font-size: 14px; line-height: 1.5; }
+
+    .pricing-section { padding: 24px 0 32px; }
+    .pricing-card { border-width: 1px; border-radius: 10px; padding: 16px 12px; }
+    .price-old { font-size: 16px; }
+    .price-new { font-size: 30px; }
+    .cta-button { font-size: 15px; padding: 12px 14px; border-radius: 8px; }
+
+    .testimonials-section { padding: 24px 0; }
+    .testimonial-card { padding: 14px 12px; border-radius: 10px; }
+    .guarantee { padding: 14px 12px; margin: 16px auto; }
+
+    /* Cards "Sans/Avec méthode" */
+    section[style*="padding: 40px 0 40px 0"] > div[style*="max-width: 720px"] {
+        padding: 0 12px !important;
+    }
+    div[style*="background: #FFF5F5"][style*="border-radius: 20px"],
+    div[style*="background: #F0FDF4"][style*="border-radius: 20px"] {
+        padding: 16px 12px !important;
+        border-radius: 12px !important;
+    }
+    div[style*="border: 1.5px solid #FECDD3"][style*="border-radius: 12px"],
+    div[style*="border: 1.5px solid #BBF7D0"][style*="border-radius: 12px"] {
+        padding: 10px 10px !important;
+    }
+    p[style*="font-size: 12.5px"] {
+        font-size: 11px !important;
+        line-height: 1.55 !important;
+    }
+    div[style*="font-size: 13px"][style*="background: #FEE2E2"],
+    div[style*="font-size: 13px"][style*="background: #DCFCE7"] {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+        padding: 10px !important;
+    }
+}
         .fade-in {
             opacity: 0; transform: translateY(16px);
             animation: fadeUp 0.6s ease forwards;

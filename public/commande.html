@@ -43,7 +43,7 @@ src="https://www.facebook.com/tr?id=934545239111386&ev=PageView&noscript=1"
             --shadow: 0 2px 16px rgba(0,0,0,0.06); --shadow-lg: 0 8px 40px rgba(0,0,0,0.10);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        img, video, iframe { max-width: 100%; height: auto; }
+        img, video { max-width: 100%; height: auto; }
         html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
         body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
         .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
@@ -201,7 +201,6 @@ src="https://www.facebook.com/tr?id=934545239111386&ev=PageView&noscript=1"
                 const checkout = await stripe.initEmbeddedCheckout({ clientSecret });
                 document.getElementById('checkout-loading').style.display = 'none';
                 checkout.mount('#checkout');
-                const checkoutAppearance = { variables: { fontSizeBase: '14px', spacingUnit: '2px' } };
             } catch (error) {
                 console.error('Checkout error:', error);
                 document.getElementById('checkout-loading').style.display = 'none';
